@@ -1,0 +1,30 @@
+.vertical{
+    height:90vh;
+    width:117px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    
+    .icons{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        img{
+            width: 64px;
+            height: 64px;
+        }
+    }
+    
+    .copiryght{
+        color: white;
+        transform-origin: left;
+        transform: rotate(-90deg);
+        width: max-content;
+        position: absolute;
+        bottom: 0;
+        left: 59px;
+    }
+}
