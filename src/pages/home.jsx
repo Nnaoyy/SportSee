@@ -1,3 +1,4 @@
+import DaylyActivities from "../components/DaylyActivities";
 import Hello from "../components/hello";
 import { USER_MAIN_DATA} from "../datas/data";
 
@@ -15,6 +16,9 @@ function Home (){
     return(        
             <div className="test">
                 <Hello name={name}/>
+                <div>
+                    <DaylyActivities/>
+                </div>
             </div>
     )
    
