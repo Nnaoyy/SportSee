@@ -1,5 +1,6 @@
-import DaylyActivities from "../components/DaylyActivities";
+import DailyActivities from "../components/DailyActivities";
 import Hello from "../components/hello";
+import Session from "../components/session";
 import { USER_MAIN_DATA} from "../datas/data";
 
 import "./home.scss";
@@ -17,7 +18,9 @@ function Home (){
             <div className="test">
                 <Hello name={name}/>
                 <div>
-                    <DaylyActivities/>
+                    <DailyActivities/>
+                    <div><Session/></div>
+                    
                 </div>
             </div>
     )

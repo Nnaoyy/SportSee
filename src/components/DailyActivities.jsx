@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-import "./DaylyActivities.scss";
+import "./DailyActivities.scss";
 
 const CustomTooltip = ({ active, payload }) => {
 	if (active && payload) {
@@ -24,7 +24,7 @@ export const monthTickFormatter = (tick) => {
 }
 
 
-function DaylyActivities() {
+function DailyActivities() {
     let activityData =[
         {
             day: '2020-07-01',
@@ -132,4 +132,4 @@ function DaylyActivities() {
     );
 }
 
-export default DaylyActivities;
+export default DailyActivities;
