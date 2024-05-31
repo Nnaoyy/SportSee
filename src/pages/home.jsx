@@ -1,5 +1,7 @@
 import DailyActivities from "../components/DailyActivities";
 import Hello from "../components/hello";
+import RadarStrength from "../components/radar";
+import Score from "../components/score";
 import Session from "../components/session";
 import { USER_MAIN_DATA} from "../datas/data";
 
@@ -15,12 +17,15 @@ function Home (){
     }
     const name = foundUser.userInfos.firstName;
     return(        
-            <div className="test">
+            <div className="home">
                 <Hello name={name}/>
-                <div>
+                <div className="graph">
                     <DailyActivities/>
-                    <div><Session/></div>
-                    
+                    <div className="bottom">
+                        <Session/>
+                        <RadarStrength/>
+                        <Score/>
+                    </div>                   
                 </div>
             </div>
     )

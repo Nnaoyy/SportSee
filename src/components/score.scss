@@ -1,0 +1,34 @@
+.score{
+    width: 258px;
+    height: 263px;
+    position: relative;
+
+    &_title{
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        margin-top: 29px;
+        margin-left: 34px;
+        position: absolute;
+        color: black;
+
+    }
+    .objectif{
+        position:absolute;
+        top: 32%;
+        left: 32%;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: center;
+        width: 95px;
+
+        span{
+            font-weight: 700;
+            font-size: 26px;
+        }
+    }
+}
