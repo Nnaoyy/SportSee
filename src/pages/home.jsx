@@ -1,4 +1,5 @@
 import DailyActivities from "../components/DailyActivities";
+import Datas from "../components/datas";
 import Hello from "../components/hello";
 import RadarStrength from "../components/radar";
 import Score from "../components/score";
@@ -19,6 +20,7 @@ function Home (){
     return(        
             <div className="home">
                 <Hello name={name}/>
+                <div className="datas">
                 <div className="graph">
                     <DailyActivities/>
                     <div className="bottom">
@@ -26,6 +28,8 @@ function Home (){
                         <RadarStrength/>
                         <Score/>
                     </div>                   
+                </div>
+                <Datas/>
                 </div>
             </div>
     )
