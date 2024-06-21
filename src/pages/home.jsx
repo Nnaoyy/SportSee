@@ -4,32 +4,64 @@ import Hello from "../components/hello";
 import RadarStrength from "../components/radar";
 import Score from "../components/score";
 import Session from "../components/session";
-import { USER_MAIN_DATA} from "../datas/data";
+
+import { getUser, getActivity, getAverageSessions, getPerformance } from "../services/api";
+import { useEffect, useState } from "react";
 
 import "./home.scss";
 
 function Home (){
-    let userId = 12;
-    const foundUser = USER_MAIN_DATA.find(user =>  user.id === userId)
-    if (!foundUser){
-        return (
-            <div>la personne n'a pas été trouvée</div>
-        )
-    }
-    const name = foundUser.userInfos.firstName;
+    const id = 12;
+
+    
+    const [userData, setUserData] = useState(null);
+    const [activityData, setActivityData] = useState(null);
+    const [sessionData, setSessionData] = useState(null);
+    const [performanceData, setPerformanceData] = useState(null);
+  
+    useEffect(() => {
+        async function fetchData() {
+          try {
+            const userData = await getUser(id);
+            setUserData(userData);
+            
+            const activityData = await getActivity(id);
+            setActivityData(activityData);
+
+            const sessionData = await getAverageSessions(id);
+            setSessionData(sessionData);
+
+            const performanceData = await getPerformance(id);
+            setPerformanceData(performanceData);
+  
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
+        }
+    
+         fetchData();
+      }, [id]);
+  
+     
+    console.log(performanceData)
+
+    if (!userData || !activityData || !sessionData || !performanceData){
+        return <div>Loading...</div>;
+    } 
+
     return(        
             <div className="home">
-                <Hello name={name}/>
-                <div className="datas">
+                <Hello name={userData.userInfos.firstName}/>
+                <div className="dashboard">
                 <div className="graph">
-                    <DailyActivities/>
+                    <DailyActivities activityData={activityData.sessions}/>
                     <div className="bottom">
-                        <Session/>
-                        <RadarStrength/>
-                        <Score/>
+                        <Session sessionData={sessionData.sessions}/>
+                        <RadarStrength data={performanceData.data} kind={performanceData.kind} />
+                        <Score user={userData}/>
                     </div>                   
                 </div>
-                <Datas/>
+                <Datas keyData={userData.keyData}/>
                 </div>
             </div>
     )

@@ -3,36 +3,16 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 
 import "./radar.scss";
 
-const data= [
-    {
-        value: 80,
-        kind: 'cardio'
-    },
-    {
-        value: 120,
-        kind: 'energy'
-    },
-    {
-        value: 140,
-        kind: 'endurance'
-    },
-    {
-        value: 50,
-        kind: 'strength'
-    },
-    {
-        value: 200,
-        kind: 'speed'
-    },
-    {
-        value: 90,
-        kind: 'intensity'
+
+
+export default function RadarStrength ({data , kind}) {
+console.log(data);
+console.log(kind);
+data.map(element =>{
+    if(typeof element.kind === 'number'){
+        element.kind= kind[element.kind];
     }
-];
-
-export default function RadarStrength () {
-
-
+})
 
     return (
         <div className='radar'>

@@ -6,8 +6,9 @@ import "./score.scss";
 
 const COLORS = ['#ff0000', '#fff'];
 
-export default function Score () {
-    const userScore = 12;
+export default function Score ({user}) {
+
+    const userScore = (user.score?user.score: user.todayScore)*100;
     const data = [
         { value: userScore },
         { value: 100 - userScore },

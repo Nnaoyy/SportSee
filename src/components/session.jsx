@@ -48,7 +48,7 @@ const data = [
     }
 ];
 
-export default function Session () {
+export default function Session ({sessionData}) {
 
     const dayFormatter = (tick) => {
         return dayAbbreviations[tick - 1];
@@ -65,7 +65,7 @@ export default function Session () {
             <LineChart
             width={500}
             height={300}
-            data={data}
+            data={sessionData}
             margin={{
                 top: 5,
                 right: 10,
