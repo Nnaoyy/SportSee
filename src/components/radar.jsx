@@ -6,8 +6,7 @@ import "./radar.scss";
 
 
 export default function RadarStrength ({data , kind}) {
-console.log(data);
-console.log(kind);
+
 data.map(element =>{
     if(typeof element.kind === 'number'){
         element.kind= kind[element.kind];
