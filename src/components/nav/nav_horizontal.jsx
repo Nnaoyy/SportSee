@@ -1,3 +1,6 @@
+import {  NavLink } from "react-router-dom";
+
+
 import "./nav_horizontal.scss" ;
 
 function Horizontal (){
@@ -9,10 +12,10 @@ function Horizontal (){
                 <p>SportSee</p>
             </div>
             <div className="menu">
-                <p>Accueil</p>
-                <p>Profil</p>
-                <p>Réglage</p>
-                <p>Communauté</p>
+                <NavLink to="" className="link">Accueil</NavLink>
+                <NavLink to="" className="link">Profil</NavLink>
+                <NavLink to="" className="link">Réglage</NavLink>
+                <NavLink to="" className="link">Communauté</NavLink>
             </div>
         </div>
     )

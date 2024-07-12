@@ -26,15 +26,24 @@
     width:39px;
     background-color: white;
     font-family: Roboto;
-    font-size: 7px;
+    font-size: 8px;
     font-weight: 500;
     line-height: 24px;
     text-align: center;
     color: black;
+    p{
+        font-size: 12px; //police augmenté pour la démo
+    }
 }
 .recharts-dot.recharts-line-dot {
     display: none;
 }
 .recharts-xAxis{
     width: 258px;
+}
+
+@media (width < 1320px ){
+    .session{
+        width: 33%;
+    }
 }

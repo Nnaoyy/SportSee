@@ -28,5 +28,12 @@
         justify-content: space-around;
         color: white;
         width: 80%;
+
+        .link{
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
     }
 }

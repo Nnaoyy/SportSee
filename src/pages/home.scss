@@ -12,3 +12,24 @@
         gap: 20px;
     }
 }
+
+@media (height < 880px ){
+    .home{
+        margin-top: 0;
+    }
+}
+
+@media (width < 1320px ){
+    .home{
+        margin-left: 10px;
+        
+        .dashboard{
+            gap: 0;
+        }
+
+        .bottom{
+            width: 700px;
+            gap: 1px;
+        }
+    }
+}
