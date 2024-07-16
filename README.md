@@ -15,7 +15,8 @@
 - Lancer le front-end : `npm run dev`
 
 Les 2 URL disponibles (pour les 2 utilisateurs) sont :
-  -http://localhost:5173/user/12
-  -http://localhost:5173/user/18
 
-Par défaut l'url http://localhost:5173 reçoit les données de l'utilisateur 12 donc reviens a aller sur l'url http://localhost:5173/user/12
+  - http://localhost:5173/user/12
+  - http://localhost:5173/user/18
+
+Par défaut l'url http://localhost:5173 reçoit les données de l'utilisateur 12 donc reviens à aller sur l'url http://localhost:5173/user/12
